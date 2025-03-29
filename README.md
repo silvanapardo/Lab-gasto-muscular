@@ -31,7 +31,9 @@ Para el filtrado de la señal se usan funciones de las librerias scipy.signal la
 ![image](https://github.com/user-attachments/assets/1b1bd8d8-c6db-42c2-9747-28c877c3d29d)
 
 Luego con la librería mathplotlib.pyplot se grafica 
-![image](https://github.com/user-attachments/assets/16ab3a6e-182f-44e5-9246-a5132dd81d43)
+
+![image](https://github.com/user-attachments/assets/cd585bca-d1df-453f-8657-8ef55a5dedab)
+
 
 
 
@@ -45,9 +47,15 @@ La señal EMG se divide en segmentos de tiempo mediante funciones como la ventan
 
 
 
-# Transformada de Fourier (FFT):
-Permite convertir la señal de dominio temporal a dominio frecuencial para evaluar componentes espectrales relevantes, como la frecuencia dominante y la media espectral.
-
 
 # Análisis estadístico: 
-Se aplica un test de hipótesis para determinar si los cambios en la frecuencia mediana son significativos, utilizando pruebas como la comparación de medias.
+Se aplica un test de hipótesis para determinar si los cambios en la frecuencia mediana son significativos, utilizando pruebas como la comparación de medias, a partir de la transformada de Fourier .
+![image](https://github.com/user-attachments/assets/13f55c73-eaac-4b28-a20e-c1e21a45763b)
+
+A partir de los calculos de las medianas, con el código se realiza el test de hipótesis
+
+![image](https://github.com/user-attachments/assets/9291bf40-2ddf-4d28-8a90-a9ea0c66ddf8)
+
+Con el valor p de la hipótesis al ser menor a 0.05 nos confirma que el cambio en la frecuencia y mediana es significativo.
+# Conclusiones 
+El análisis de la señal EMG permitió observar cómo la actividad eléctrica del músculo cambia con la fatiga, evidenciado por una disminución en la frecuencia mediana. Esto indica que, con el esfuerzo prolongado, el músculo recurre a fibras más lentas y menos eficientes. Para estudiar este efecto, se dividió la señal en segmentos y se aplicó la Transformada de Fourier con el método de Welch, lo que permitió obtener el espectro de frecuencias y analizar su evolución en el tiempo. Además, se utilizó una ventana de Hamming para mejorar la calidad del análisis. La prueba estadística confirmó que los cambios en la señal fueron significativos y no producto del azar. Estos resultados demuestran la importancia del procesamiento digital en la interpretación de señales EMG y su aplicación en rehabilitación, deporte y biomecánica para evaluar la fatiga muscular y prevenir lesiones.
